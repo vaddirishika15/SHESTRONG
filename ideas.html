@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thoughts/Ideas Sharing</title>
+<style>
+    /* Basic styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    section {
+        margin-top: 20px;
+    }
+
+    /* Individual thought/idea styling */
+    .thought {
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .thought p {
+        margin: 0;
+    }
+
+    .thought small {
+        color: #555;
+    }
+
+    /* Footer styling */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+  import { getDatabase, ref, push, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAhqV4zch0B-zp5l1a1ah98MNdr-gzFMJg",
+    authDomain: "idea-bc04a.firebaseapp.com",
+    databaseURL: "https://idea-bc04a-default-rtdb.firebaseio.com",
+    projectId: "idea-bc04a",
+    storageBucket: "idea-bc04a.appspot.com",
+    messagingSenderId: "411515508801",
+    appId: "1:411515508801:web:28edfae474b8da87ef0ec0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+  // Function to add a new thought to the Realtime Database
+  async function addThought(gmailId, thoughtContent) {
+    try {
+      const thoughtRef = ref(database, 'thoughts');
+      const newThoughtRef = push(thoughtRef);
+      await set(newThoughtRef, {
+        gmailId: gmailId,
+        content: thoughtContent,
+        timestamp: new Date().toISOString()
+      });
+      console.log("Thought added successfully");
+    } catch (error) {
+      console.error("Error adding thought: ", error);
+    }
+  }
+
+  // Event listener for form submission
+  document.getElementById("thoughtForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const thoughtContent = document.getElementById("thoughtContent").value;
+    const gmailId = document.getElementById("gmailAddress").value;
+    await addThought(gmailId, thoughtContent);
+    document.getElementById("thoughtContent").value = ""; // Clear the input field
+    document.getElementById("gmailAddress").value = ""; // Clear the input field
+  });
+
+  // Function to fetch thoughts from Realtime Database and display them
+  function fetchThoughts() {
+    const thoughtsContainer = document.getElementById("thoughtsContainer");
+    const thoughtsRef = ref(database, 'thoughts');
+    onValue(thoughtsRef, (snapshot) => {
+      thoughtsContainer.innerHTML = ""; // Clear previous content
+      snapshot.forEach((childSnapshot) => {
+        const thought = childSnapshot.val();
+        const thoughtElement = document.createElement("div");
+        thoughtElement.classList.add("thought");
+        thoughtElement.innerHTML = `<p><strong>${thought.gmailId}:</strong> ${thought.content}</p><small>${new Date(thought.timestamp).toLocaleString()}</small>`;
+        thoughtsContainer.appendChild(thoughtElement);
+      });
+    });
+  }
+
+  // Fetch and display thoughts when the page loads
+  window.onload = fetchThoughts;
+</script>
+</head>
+<body>
+<header>
+    <h1>Share Your Thoughts/Ideas</h1>
+    <!-- Include navigation links if needed -->
+</header>
+
+<main>
+    <!-- Form for sharing thoughts/ideas -->
+    <form id="thoughtForm">
+        <label for="thoughtContent">Share your thought/idea:</label>
+        <textarea id="thoughtContent" name="thoughtContent" rows="4" required></textarea>
+        <label for="gmailAddress">Your Gmail Address:</label>
+        <input type="email" id="gmailAddress" name="gmailAddress" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display existing thoughts/ideas -->
+    <section id="thoughtsContainer">
+        <!-- Thoughts/ideas will be dynamically added here -->
+    </section>
+</main>
+
+<footer>
+    <!-- Include footer content if needed -->
+</footer>
+</body>
+</html>

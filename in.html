@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="in.html"><img src="images/S.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#learn">LEARN</a></li>
+                    <li><a href="#explore">EXPLORE</a></li>
+                    <li><a href="#videos">VIDEOS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text">
+             <h1>SHE STRONG</h1>
+             <p>Stronger Than She Knows</p>
+             <a href="#ideass">Join Us</a>
+        </div>
+    </section>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("header");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds (adjust as needed)
+        }
+    </script>
+    <section class="abt" id="about">
+        <h1>ABOUT</h1> 
+        <div class="row">
+            <div class="col">
+                <p>We believe in fostering a community where women can connect, share their experiences, and inspire each other. Our platform serves as a hub for female entrepreneurs to exchange ideas, collaborate, and network with diverse individuals.
+                    Join us in this journey of empowerment, education, and connection. Together, we're redefining strength and uplifting each other in every way possible."
+                </p>
+            </div>
+        </div>
+           <!-- <img src="images/Picture2.png">-->
+           <h1 class="para">SHE BELIEVED SHE COULD, SO SHE DID</h1>
+        <!--<img src="images/Picture2.png">-->
+        <img src="ig4/new.jpg" alt="image des">
+    </section>
+    <section class="lrn" id="learn">
+        <h1>EXPLORE...EMPOWER...</h1>
+        <div class="grid">
+            <div class="img-cont">
+                <img src="images/mhm.jpg">
+                <button class="img-btn" onclick="showInfo('Menstrual hygiene management (MHM) refers to the practices and facilities that women and girls use during menstruation to ensure they can manage their periods with dignity, comfort, and safety. Effective MHM is essential for maintaining the health, well-being, and full participation of women and girls in society. Here are some key aspects of menstrual hygiene management..Women and girls need access to clean and absorbent menstrual hygiene products like sanitary pads, tampons, menstrual cups, or reusable cloth pads. Lack of access to these products can lead to unhygienic practices... Its essential to provide proper disposal options for used menstrual hygiene products..This helps prevent environmental pollution and ensures privacy and dignity...Access to clean water and sanitation facilities, including toilets and handwashing facilities, is crucial for MHM... Girls and women need safe and private spaces to change and clean themselves...Access to clean water and sanitation facilities, including toilets and handwashing facilities, is crucial for MHM. Girls and women need safe and private spaces to change and clean themselves...Many women experience menstrual pain or discomfort. Access to pain relief options and understanding how to manage pain is part of MHM...There should be education and awareness programs about menstruation to dispel myths, reduce stigma, and promote safe and healthy practices. This education is important for both girls and boys...MHM practices can be influenced by cultural and religious beliefs. Respect for these beliefs while promoting safe practices is crucial...Promoting proper menstrual hygiene management is not only a matter of health and hygiene but also a matter of gender equality and human rights. It ensures that women and girls can participate fully in education, work, and community life without the burden of stigma or health issues related to menstruation.')">Here</button>
+            </div>
+            <div class="img-cont">
+                <img src="images/RACH.jpg">
+                <button class="img-btn" onclick="showInfo('Reproductive and Child Health (RCH) is a public health initiative that focuses on improving the health and well-being of women during their reproductive years and ensuring the survival and healthy development of infants and children. It encompasses a wide range of services and programs aimed at addressing various aspects of reproductive health, maternal health, and child health...RCH programs aim to improve maternal health by providing essential prenatal care, safe delivery services, and postnatal care to pregnant women. This includes ensuring that women have access to skilled healthcare providers during pregnancy and childbirth...RCH services often include family planning programs to help couples and individuals make informed decisions about the number and timing of their children. This includes the provision of contraceptives and family planning education...The health and well-being of children are central to RCH. Programs target child nutrition, immunization, prevention and treatment of childhood illnesses, and access to pediatric healthcare services...Safe motherhood programs aim to reduce maternal mortality by ensuring safe and clean delivery practices and providing timely access to emergency obstetric care when needed...RCH includes efforts to educate women and couples about reproductive health, family planning, and maternal and child care. This education helps individuals make informed choices regarding their health and family planning...Adequate nutrition is critical for both maternal and child health. RCH programs often include interventions to address malnutrition and promote proper infant and young child feeding practices...Adequate nutrition is critical for both maternal and child health. RCH programs often include interventions to address malnutrition and promote proper infant and young child feeding practices...Reproductive and child health programs are critical for reducing maternal and child mortality,improving overall health outcomes, and advancing the well-being of families and communities.They are often implemented by governments,non-governmental organizations,and international agencies to promote better health for women and children worldwide... ')">Here</button>
+            </div>
+            <div class="img-cont">
+                <img src="images/ed.jpg">
+                <button class="img-btn" onclick="showInfo('Entrepreneurship development refers to the process of enhancing the skills, knowledge, and resources of individuals to enable them to identify and create new business opportunities, start and manage their enterprises effectively, and contribute to economic growth and job creation. It plays a vital role in fostering innovation, economic development, and job creation in both developed and developing economies...Providing aspiring entrepreneurs with training and education in various aspects of entrepreneurship, including business planning, financial management, marketing, and leadership skills. Entrepreneurship development programs can be offered through formal education institutions, vocational training centers, or specialized entrepreneurship training organizations...Ensuring that entrepreneurs have access to financing options, such as loans, grants, venture capital, and angel investment, to start and grow their businesses. Access to capital is often a significant barrier for many potential entrepreneurs...Connecting entrepreneurs with experienced mentors and business advisors who can provide guidance, share knowledge, and offer valuable insights. Building networks within the entrepreneurial ecosystem can help entrepreneurs access resources and opportunities...Supporting the establishment and operation of business incubators and accelerators that provide startups with physical space, resources, mentorship, and networking opportunities. These programs help startups develop their ideas into viable businesses... Creating a conducive regulatory environment that promotes entrepreneurship by reducing bureaucratic hurdles, simplifying business registration processes, and protecting the rights of entrepreneurs. Entrepreneur-friendly policies can encourage innovation and business growth...Encouraging innovation and research and development (R&D) activities among entrepreneurs. Innovation can lead to the development of new products, services, and technologies, giving businesses a competitive edge...Developing a robust entrepreneurial ecosystem that includes universities, research institutions, investors, industry associations, and government agencies. A thriving ecosystem encourages collaboration and knowledge-sharing...Entrepreneurship development is not only about starting and growing businesses but also about creating a culture of innovation, adaptability, and resilience. It contributes to job creation, economic diversification, and overall economic development. Governments, private sector organizations, and non-profit entities often collaborate to promote entrepreneurship and create an enabling environment for entrepreneurs to thrive.')">Here</button>
+            </div>
+            <div class="img-cont">
+                <img src="images/pd.jpg">
+                <button class="img-btn" onclick="showInfo('Personality development refers to the process of enhancing and refining an individuals qualities, characteristics, behaviors, and attitudes to become a better version of themselves. It involves personal growth and self-improvement in various aspects of life, including social, emotional, physical, and intellectual dimensions... Begin by understanding yourself better. Reflect on your strengths, weaknesses, values, beliefs, and emotions. Self-awareness is the foundation of personality development...Define your short-term and long-term goals. Having clear objectives will give you a sense of direction and purpose in life...Work on building self-confidence. Believe in your abilities and skills. Confidence is attractive and can positively impact various aspects of your life...Develop strong communication skills. Good communication is essential for building relationships, both personally and professionally...Cultivate a positive mindset. Replace negative thoughts with positive affirmations. Optimism can improve your overall well-being...Enhance your emotional intelligence by understanding and managing your emotions effectively. Also, work on your empathy and understanding of others emotions...Never stop learning. Acquire new knowledge and skills, whether through formal education, reading, online courses, or practical experiences...Learn to manage your time efficiently. Prioritize tasks and set aside time for self-improvement and relaxation... Develop the ability to adapt to change. Life is constantly changing, and being adaptable helps you cope with unexpected challenges...Take care of your physical health through regular exercise, a balanced diet, and adequate sleep. Physical well-being contributes to mental and emotional well-being...Develop leadership qualities, even if youre not in a formal leadership role. Leadership skills can benefit you in various areas of life...Practice gratitude by acknowledging and appreciating the positive aspects of your life. It can enhance your overall happiness...Remember that personality development is an ongoing process, and there is always room for improvement. Its about becoming the best version of yourself and living a fulfilling and meaningful life.')">Here</button>
+            </div>
+            <div class="images/cg.jpg">
+                <img src="images/cg.jpg">
+                <button class="img-btn" onclick="showInfo('Career guidance is a process that helps individuals make informed decisions about their education, training, and career choices. It involves assessing an individuals interests, skills, values, and goals to provide guidance on choosing a suitable career path...Start by assessing your interests, strengths, weaknesses, values, and goals. Consider what activities you enjoy, what subjects you excel in, and what you are passionate about...Explore different career options and industries. Research the job market, employment trends, and the qualifications required for various professions...Define your short-term and long-term career goals. Having clear objectives will help you stay focused on your career path... Identify the educational and training requirements for your chosen career. Determine whether you need to pursue a specific degree, certification, or apprenticeship...Develop the skills and competencies needed for your chosen career. This may involve taking courses, gaining work experience, or acquiring technical skills...Build a professional network by connecting with peers, mentors, and professionals in your field of interest. Networking can provide valuable insights and opportunities... Create a well-crafted resume and cover letter tailored to your chosen career. Highlight your relevant skills, experiences, and achievements...Utilize job search platforms, company websites, and networking to find job openings. Apply to positions that align with your career goals...Prepare for interviews by researching common interview questions, practicing your responses, and improving your interview skills...Stay updated with industry trends and advancements. Consider taking additional courses or certifications to enhance your qualifications...Consult with career counselors, mentors, or career advisors. They can provide expert advice and guidance based on your individual needs...Strive for a healthy work-life balance to avoid burnout and maintain overall well-being...Continuously review and adjust your career plans as needed. Long-term planning can help you achieve your ultimate career goals...Once you start your career, focus on continuous career development. Seek opportunities for advancement, skill enhancement, and leadership roles...Manage your finances wisely. Budgeting and saving can provide financial security and enable you to pursue your career goals...Career guidance is an ongoing process, and its essential to adapt and evolve as your career progresses. Remember that your career path may not always be linear, and its okay to explore different options and make changes based on your evolving interests and goals.')">Here</button>
+            </div>
+            <div class="img-cont">
+                <img src="images/er.jpg">
+                <button class="img-btn" onclick="showInfo('Empowerment resources are tools, information, and support systems that help individuals and communities enhance their abilities, self-confidence, and opportunities to lead more fulfilling lives. Empowerment can take various forms, including personal, economic, social, and political empowerment...Local schools, colleges, and universities offer educational resources.Online learning platforms like Coursera, edX, and Khan Academy provide access to courses on a wide range of topics.. Libraries offer books, journals, and resources for self-study.Financial literacy workshops and courses teach money management skills.Local banks and credit unions provide financial advice and services.Government agencies may offer assistance programs for financial stability.Business incubators and accelerators offer resources for aspiring entrepreneurs.Small Business Administration (SBA) provides guidance for small business owners.Networking events and business associations can help build connections.Local healthcare facilities provide medical services and wellness resources.Community centers offer fitness classes and mental health support.Online health platforms and apps provide information on nutrition, exercise, and mental health.Mentorship programs connect individuals with experienced mentors.Professional coaches provide guidance in various areas, from career to personal development. Online mentorship platforms and networks facilitate mentor-mentee relationships.Government agencies offer social services such as housing assistance, food programs, and childcare support. Nonprofit organizations often provide assistance with basic needs.Womens organizations focus on gender-specific empowerment initiatives. Female networking groups provide opportunities for connection and support.Online forums and social media groups can provide information and support on various topics.Platforms like Reddit and Quora host communities discussing empowerment and self-improvement.Government agencies at local, state, and federal levels may offer empowerment resources related to education, employment, and social services.Books and podcasts by motivational speakers and self-help authors offer insights and strategies for personal growth.Workshops and seminars, both in-person and online, cover topics like self-esteem, resilience, and assertiveness...Workshops and seminars, both in-person and online, cover topics like self-esteem, resilience, and assertiveness.')">Here</button>
+            </div>
+            
+            <!--<img src="images/mhm.jpg">
+            <img src="images/RACH.jpg">
+            <img src="images/ed.jpg">
+            <img src="images/pd.jpg">
+            <img src="images/cg.jpg">
+            <img src="images/er.jpg">-->
+        </div>
+        <!----modal container-->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modal-image" src="" alt="">
+                <div id="modal-text" style="color: black;">Additional info goes here.</div>
+            </div>
+        </div>
+        <script>
+            // Function to show the modal with information
+            function showInfo(infoText) {
+                const modal = document.getElementById('myModal');
+                const modalImage = document.getElementById('modal-image');
+                const modalText = document.getElementById('modal-text');
+            
+                modal.style.display = 'block';
+                modalImage.style.display = 'none'; // Hide the image
+                modalText.textContent = infoText;
+            }
+           //const closeButton = document.querySelector('.close');
+             //Add an event listener to close the modal when the "x" button is clicked
+            //closeButton.addEventListener('click', () => {
+               // modal.style.display = 'none';
+        //});
+        function closeModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'none';
+    }
+        </script>
+    </section>
+    <section class="exp" id="explore">
+        <!-- <a href="index.html" class="hl"><img src="images/home.png" alt="Home Icon"></a> -->
+        <h3>FEATURED STORIES</h3>
+        <div class="row-container"> 
+            <div class="exp-row">
+                <img src="images/ag.jpeg" alt="Description 1">
+                <p>Aditi Gupta-Menstrupedia</p>
+                <button class="exp-btn" onclick="showInfo('Aditi Gupta started Menstrupedia in November 2012 to change the beliefs around menstruation. Menstrupedia designs comic books that make menstruation simpler to understand. Appalled by the lack of information and awareness around such a natural biological process and the taboos and beliefs associated with it, Aditi took it upon herself to create awareness. She herself faced these prejudices that affect the lives of girls and women across India. She decided to take charge and started Menstrupedia with her husband, Tuhin Patel. The comics also discuss sanitation and the well-being of women.')">Read More</button>
+            </div>
+            <div class="exp-row">
+                <img src="images/vs.jpg" alt="Description 1">
+                <p>Vineeta Singh-SUGAR</p>
+                <button class="exp-btn" onclick="showInfo('Vineeta Singh founded the online beauty brand SUGAR Cosmetics in the year 2015. Vineeta also founded the cosmetics brand FAB BAG in the year 2012. Both SUGAR and FAB BAG are subsidiaries of Velvette Lifestyles Pvt Ltd, a larger conglomerate operating in the beauty and cosmetics industry.SUGAR Cosmetics also has a YouTube channel with over 8 lakh subscribers as of November 2022.')">Read More</button>
+            </div>
+            <div class="exp-row">
+                <img src="images/fn.jpg" alt="Description 1">
+                <p>Falguni Nayar-Nykaa</p>
+                <button class="exp-btn" onclick="showInfo('Everyone was awestruck when the managing director of Kotak Mahindra Bank quit her lucrative job to launch her startup. It was April 2012 when 50-year-old Falguni Nayar decided to launch Nykaa—a homegrown beauty and wellness brand—with ₹10.68 crore from her pocket. Cut to 2022, Nykaa is now a public-listed company and a remarkable success story. The company grew 345% last year.Nykaa is also proof that entrepreneurship is not as much about age as it is about the state of mind. When most people her age start taking things slow and looking for retirement options, Falguni decided to venture into a new world and became a billionaire with a net worth of $1.1 billion. As per Hindustan Times, Falguni is the richest woman in India, with a net worth of ₹38,700 crore.')">Read More</button>
+            </div>
+            <div class="exp-row">
+                <img src="images/ss.jpg" alt="Description 1">
+                <p>Shradha Sharma-YourStory</p>
+                <button class="exp-btn" onclick="showInfo('Founded in 2008, YourStory is a digital media platform dedicated to entrepreneurs and startups. Before launching YourStory, Shradha had served as a Brand Advisor at The Times of India and the Assistant Vice President at CNBC TV18. She realised her keen interest in startups and entrepreneurship while she was working as a journalist at CNBC TV18 between June 2007 to July 2009.Shradha thought that people all over the world were building great things, but their stories weren’t covered by the media. She invested her time in writing stories about successful people and shared them in her blog. It gradually gained traction and drew attention. YourStory received investments from well-known business persons like Ratan Tata, Karthee Madasamy, Vani Kola and T.V. Mohandas Pai. YourStory has become India’s leading online media venture for startups and entrepreneurs. With over 40,000 stories published on the platform, it has over 10 million active readers.')">Read More</button>
+            </div>
+        </div>
+    </section>
+    <!-- <script>
+        function toggleText(textId) {
+            const textElement = document.getElementById(textId);
+            textElement.classList.toggle('show');
+        }
+    </script> -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <div id="modal-text" style="color: black;">Additional info goes here.</div>
+        </div>
+    </div>
+    <script>
+        // Function to show the modal with information
+        function showInfo(infoText) {
+            const modal = document.getElementById('myModal');
+            const modalImage = document.getElementById('modal-image');
+            const modalText = document.getElementById('modal-text');
+        
+            modal.style.display = 'block';
+            modalImage.style.display = 'none'; // Hide the image
+            modalText.textContent = infoText;
+        }
+       //const closeButton = document.querySelector('.close');
+         //Add an event listener to close the modal when the "x" button is clicked
+        //closeButton.addEventListener('click', () => {
+           // modal.style.display = 'none';
+    //});
+    function closeModal() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}
+    </script>
+    <section class="vid" id="videos">
+        <h1>VIDEOS</h1>
+        <p>Discover,Watch,Inspire:Where inspiration meets play</p>
+        <div class="v1">
+            <iframe width="520" height="420" src="https://www.youtube.com/embed/JgN09GN8ZnY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- <iframe width="520" height="420" src="https://www.youtube.com/embed/JgN09GN8ZnY" frameborder="0" allowfullscreen></iframe> -->
+        <div class="video-container">
+            <div class="v2">
+                <iframe width="520" height="380" src="https://www.youtube.com/embed/qm0isl11BfY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div>
+            <div class="v3">
+                <iframe width="520" height="420" src="https://www.youtube.com/embed/9BFSKjbODK8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="idea" id="ideass">
+        <header>
+            <h1>Share Your Thoughts/Ideas</h1>
+            <!-- Include navigation links if needed -->
+        </header>
+        <form id="thoughtForm">
+            <label for="thoughtContent">Share your thought/idea:</label>
+            <textarea id="thoughtContent" name="thoughtContent" rows="4" required></textarea><br>
+            <label for="gmailAddress">Your Gmail Address:</label>
+            <input type="email" id="gmailAddress" name="gmailAddress" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    
+        <!-- Display existing thoughts/ideas -->
+        <section id="thoughtsContainer">
+            <!-- Thoughts/ideas will be dynamically added here -->
+        </section>
+    
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+            import { getDatabase, ref, push, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+    
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyAhqV4zch0B-zp5l1a1ah98MNdr-gzFMJg",
+                authDomain: "idea-bc04a.firebaseapp.com",
+                databaseURL: "https://idea-bc04a-default-rtdb.firebaseio.com",
+                projectId: "idea-bc04a",
+                storageBucket: "idea-bc04a.appspot.com",
+                messagingSenderId: "411515508801",
+                appId: "1:411515508801:web:28edfae474b8da87ef0ec0"
+            };
+    
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const database = getDatabase(app);
+    
+            // Function to add a new thought to the Realtime Database
+            async function addThought(gmailId, thoughtContent) {
+                try {
+                    const thoughtRef = ref(database, 'thoughts');
+                    const newThoughtRef = push(thoughtRef);
+                    await set(newThoughtRef, {
+                        gmailId: gmailId,
+                        content: thoughtContent,
+                        timestamp: new Date().toISOString()
+                    });
+                    console.log("Thought added successfully");
+                } catch (error) {
+                    console.error("Error adding thought: ", error);
+                }
+            }
+    
+            // Event listener for form submission
+            document.getElementById("thoughtForm").addEventListener("submit", async function(event) {
+                event.preventDefault();
+                const thoughtContent = document.getElementById("thoughtContent").value;
+                const gmailId = document.getElementById("gmailAddress").value;
+                await addThought(gmailId, thoughtContent);
+                document.getElementById("thoughtContent").value = ""; // Clear the input field
+                document.getElementById("gmailAddress").value = ""; // Clear the input field
+            });
+    
+            // Function to fetch thoughts from Realtime Database and display them
+            function fetchThoughts() {
+                const thoughtsContainer = document.getElementById("thoughtsContainer");
+                const thoughtsRef = ref(database, 'thoughts');
+                onValue(thoughtsRef, (snapshot) => {
+                    thoughtsContainer.innerHTML = ""; // Clear previous content
+                    snapshot.forEach((childSnapshot) => {
+                        const thought = childSnapshot.val();
+                        const thoughtElement = document.createElement("div");
+                        thoughtElement.classList.add("thought");
+                        thoughtElement.innerHTML = `<p><strong>${thought.gmailId}:</strong> ${thought.content}</p><small>${new Date(thought.timestamp).toLocaleString()}</small>`;
+                        thoughtsContainer.appendChild(thoughtElement);
+                    });
+                });
+            }
+    
+            // Fetch and display thoughts when the page loads
+            window.onload = fetchThoughts;
+        </script>
+    </section>
+    
+
+</body>
+</html> 
